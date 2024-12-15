@@ -1,6 +1,6 @@
 Linkedin = {
   config: {
-    scrollDelay: 1000, // Delay for scrolling
+    scrollDelay: 2000, // Delay for scrolling
     actionDelay: 3000, // Delay for actions like clicking buttons
     nextPageDelay: 4000, // Delay for moving to the next page
     maxRequests: -1, // Set to -1 for no limit
