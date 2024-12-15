@@ -8,9 +8,7 @@ Linkedin = {
     addNote: true, // Add a note with each connection request
     note: `Hi {{name}},
 
-I admire the work you’ve done in the industry and would be honored to connect with you.
-
-I’m always looking to expand my network with like-minded professionals, and I believe we could share valuable insights.
+I admire the work you’ve done in the industry and would be honored to connect with you. I’m always looking to expand my network with like-minded professionals, and I believe we could share valuable insights.
 
 Looking forward to connecting!
 
@@ -22,7 +20,20 @@ Mohd Shayan Khan`,
     console.debug(
       "DEBUG: Scrolling to bottom in " + config.scrollDelay + " ms"
     );
-    setTimeout(() => this.scrollBottom(data, config), config.actionDelay);
+    this.scrollBottom(data, config);
+    this.startBackgroundProcess(data, config);  // Start background process to keep the script running
+  },
+  startBackgroundProcess: function (data, config) {
+    // Start background task to ensure script runs in the background
+    setInterval(() => {
+      if (!document.hidden) {
+        console.log("Tab is active, continuing to run the script.");
+        this.scrollBottom(data, config);
+        this.inspect(data, config);  // Add more functions to execute periodically
+      } else {
+        console.log("Tab is inactive, waiting for activity.");
+      }
+    }, config.scrollDelay); // Adjust the interval based on your scrollDelay
   },
   scrollBottom: function (data, config) {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
