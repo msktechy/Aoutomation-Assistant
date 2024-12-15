@@ -8,7 +8,9 @@ Linkedin = {
     addNote: true, // Add a note with each connection request
     note: `Hi {{name}},
 
-I admire the work you’ve done in the industry and would be honored to connect with you. I’m always looking to expand my network with like-minded professionals, and I believe we could share valuable insights.
+I admire the work you’ve done in the industry and would be honored to connect with you.
+
+I’m always looking to expand my network with like-minded professionals, and I believe we could share valuable insights.
 
 Looking forward to connecting!
 
