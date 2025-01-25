@@ -1,21 +1,19 @@
 Linkedin = {
   config: {
     scrollDelay: 10000, // Delay for scrolling
-    actionDelay: 10000, // Delay for actions like clicking buttons
+    actionDelay: 3000, // Delay for actions like clicking buttons
     nextPageDelay: 10000, // Delay for moving to the next page
     maxRequests: -1, // Set to -1 for no limit
     totalRequestsSent: 0, // Count of total sent requests
     addNote: true, // Add a note with each connection request
     note: `Hi {{name}},
 
-I admire the work you’ve done in the industry and would be honored to connect with you.
-
-I’m always looking to expand my network with like-minded professionals, and I believe we could share valuable insights.
+I admire the work you’ve done in the industry and would be honored to connect with you. I believe we could share valuable insights.
 
 Looking forward to connecting!
 
-Best regards,  
-Mohd Shayan Khan`,
+Regards,  
+Shayan Khan`,
   },
   init: function (data, config) {
     console.info("INFO: Script initialized on the page...");
